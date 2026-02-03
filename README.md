@@ -1,4 +1,4 @@
-# FDA
+# Function-word De-Attention
 
 ### 28/01/2026  Update 
 🏆 **Our paper has been accepted by ICLR26!** Code will be updated shortly.
