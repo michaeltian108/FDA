@@ -28,10 +28,6 @@ FDA can be plugged into existing VLMs **without adversarial training**, yielding
 ## ⚙️ Environment Setup
 
 ### Requirements
-- Python ≥ 3.8
-- PyTorch ≥ 1.13 (tested on PyTorch 2.x)
-- CUDA ≥ 11.6
-- NVIDIA GPUs (multi-GPU supported via `torchrun`)
 
 Install dependencies:
 ```bash
