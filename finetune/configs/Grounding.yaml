@@ -1,0 +1,33 @@
+train_file: ['/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/refcoco+_train.json']
+test_file: ['/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/refcoco+_val.json','/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/refcoco+_test.json']
+
+refcoco_data: '/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/'
+det_file: '/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/refcoco+/dets.json'            
+coco_file: '/mnt/data/tianqiwei/VTT/outputs/coattack/data/anno/refcoco+/cocos.json'    
+
+image_root: '/mnt/data/tianqiwei/VTT/outputs/coattack/data/coco/'
+
+bert_config: 'configs/config_bert.json'
+
+image_res: 384
+batch_size: 32
+
+queue_size: 65536
+momentum: 0.995
+vision_width: 768
+embed_dim: 256
+temp: 0.07
+
+alpha: 0.4
+distill: True
+warm_up: True
+
+optimizer: {opt: adamW, lr: 1e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 1e-5, epochs: 10, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 1, cooldown_epochs: 0}
+
+
+
+
+
+
+
