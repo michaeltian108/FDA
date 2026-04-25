@@ -43,19 +43,15 @@ We use Flickr30k/COCO/RefCOCO+ for T2IR and VG evaluation. These datasets can be
 To fine-tune ALBEF model on Retrieval:
 
 ```
-torchrun --nproc_per_node=8 train.py \
-  --config configs/Retrieval_flickr.yaml \
-  --output_dir output/Retrieval_flickr \
-  --text_encoder path/to/bert-base-uncased
+bash ir_train.sh
 ```
+
+*Note: the script uses Flickr30k as default, to train on MS-COCO, change the value of $data from `flickr` to `coco`*.
 
 To fine-tune ALBEF model on Visual Grounding:
 
 ```
-torchrun --nproc_per_node=8 train.py \
-  --config configs/Retrieval_flickr.yaml \
-  --output_dir output/Retrieval_flickr \
-  --text_encoder path/to/bert-base-uncased
+bash vg_train.sh
 ```
 
 ### 24/04/2026  Update 
@@ -63,6 +59,10 @@ torchrun --nproc_per_node=8 train.py \
 
 ### 28/01/2026  Update 
 🏆 **Our paper has been accepted by ICLR26!** Code will be updated shortly.**
+
+##To-do
+1. Add evaluation code for robustness evaluation.
+2. ...
 
 
 
